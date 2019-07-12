@@ -21,7 +21,7 @@ parser.add_argument('--batch', dest='batch_size',
 
 parser.add_argument('--data_train', dest='data_train',
                     help='data_train',
-                    default="../data/train/", type=str)
+                    default="../data/test/", type=str)
 
 parser.add_argument('--data_test', dest='data_test',
                     help='data_test',
@@ -181,12 +181,12 @@ def main():
     print("Training batch size:", args.batch_size)
 
     # bp()
-    args.epochs = 1
+    args.epochs = 15
     for epoch in range(args.epochs):
         faster_rcnn.train()
         train(epoch)
-        faster_rcnn.eval()
-        test(epoch)
+    faster_rcnn.eval()
+    test(epoch)
 
 if __name__ == "__main__":
     print(">>> Run <<<")
