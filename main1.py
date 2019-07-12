@@ -32,7 +32,7 @@ parser.add_argument('--shape', dest='shape',
                     default=600, type=int)
 parser.add_argument('--epochs', dest='epochs',
                     help='epochs',
-                    default=10, type=int)
+                    default=2, type=int)
 
 parser.add_argument('--display', dest='display',
                     help='display',
@@ -181,10 +181,12 @@ def main():
     print("Training batch size:", args.batch_size)
 
     # bp()
-    args.epochs = 15
+#     args.epochs = 15
     for epoch in range(args.epochs):
         faster_rcnn.train()
         train(epoch)
+    print("Hey you please go alive!!! I need you !!!")
+    faster_rcnn.load_state_dict(torch.load("son_of_quan.pt"))
     faster_rcnn.eval()
     test(epoch)
 
