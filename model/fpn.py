@@ -11,7 +11,7 @@ import torchvision.utils as vutils
 from model.utils.config import cfg
 from model.rpn.rpn_fpn import _rpn_fpn
 # from model.roi_module import RoIPooling2D as ROIPool
-from model.roi_pooling.modules.roi_pool_py import RoIPool as ROIPool
+# from model.roi_pooling.modules.roi_pool_py import RoIPool as ROIPool
 from model.rpn.proposal_target_layer import _ProposalTargetLayer
 from model.utils.net_utils import _smooth_l1_loss, _crop_pool_layer, _affine_grid_gen, _affine_theta
 import time
