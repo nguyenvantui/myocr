@@ -1,0 +1,7 @@
+easydict
+ipdb
+matplotlib
+cython
+numpy
+opencv-python
+scipy
